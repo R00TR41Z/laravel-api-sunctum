@@ -8,9 +8,9 @@ use PHPMailer\PHPMailer\Exception;
 
 class Mailer{
     protected $mail;
-    protected $Host = "mail.rootraiz.site";
-    protected $Username = "talk@rootraiz.site" ;
-    protected $Password = "root@raiz6217";
+    protected $Host = "edit me";
+    protected $Username = "edit me" ;
+    protected $Password = "edit me";
     protected $Port = 465;
     protected $content;
     protected $header;
@@ -45,7 +45,7 @@ class Mailer{
             //Recipients
             $this->mail->setFrom($this->Username, 'RootRaiz talk');  
             $this->mail->addAddress($email);               
-            $this->mail->addReplyTo('info@rootraiz.site', 'Information');
+            $this->mail->addReplyTo('edit me', 'Information');
         
             if($attech){
                 $this->mail->addAttachment($path);
