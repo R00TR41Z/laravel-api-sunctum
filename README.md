@@ -1,5 +1,37 @@
 # Simple API wich Laravel sunctum
 
+
+## Anyone can test at 
+
+- https://api.rootraiz.site/
+
+### endpoints 
+
+- /register
+params
+email
+name
+password
+
+
+- /login
+params
+email
+password
+
+### Those endpoints is protected by sunctum
+- /user
+
+
+- sendMail
+
+- /bycredit
+
+params
+salt = int
+
+
+
 ## how to test
 
 ```shell
