@@ -57,7 +57,7 @@ class Mailer{
 
     public  function setHeader($header)
     {
-        $this->$header = $header;
+        $this->header = $header;
     }
     public function setContent($Content)
     {
@@ -86,8 +86,8 @@ class Mailer{
                 $this->mail->addAttachment($path);
             }
             $this->mail->isHTML(true);
-            $this->mail->Subject = "<h1>".$this->header."</h1>";
-            $this->mail->Body    = '<b>'.$this->content.'</b>';
+            $this->mail->Subject = "Hello ".$this->header;
+            $this->mail->Body    = '<h1><b>'.$this->content.'</b></h1>';
             $this->mail->AltBody = $this->content;
         
             if($this->mail->send()){
