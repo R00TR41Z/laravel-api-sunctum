@@ -62,4 +62,25 @@ class SystemController extends Controller
             ]);
         }
     }
+    
+    public function register(Request $req)
+    {
+        $req->validate([
+            "email"=>"required|email|unique:users",
+            "name"=>"required",
+            "password"=>"required"
+        ]);
+        
+        User::create([
+            "email"=>$req->email,
+            "name"=>$req->name,
+            "password"=>bcrypt($req->password)
+        ]);
+        
+        if(Auth::attempt(["email"=>$req->email,"password"=>$req->password])){
+            return response()->json([
+                "token"=>Auth::user()->createToken("dpayToken")->plainTextToken
+            ]);
+        }
+    }
 }
