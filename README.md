@@ -8,16 +8,16 @@
 ### endpoints 
 
 - /register
-params
-email
-name
-password
+#### params
+- email
+- name
+- password
 
 
 - /login
-params
-email
-password
+#### params
+- email
+- password
 
 ### Those endpoints is protected by sunctum
 - /user
@@ -27,8 +27,8 @@ password
 
 - /bycredit
 
-params
-salt = int
+#### params
+- salt = int
 
 
 
