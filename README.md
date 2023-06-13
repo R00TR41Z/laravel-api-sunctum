@@ -7,25 +7,30 @@
 
 ### endpoints 
 
-- /register
+- /register - [POST]
+- [/register](https://api.rootraiz.site/register)
 #### params
 - email
 - name
 - password
 
 
-- /login
+- /login - [POST]
+- [/login](https://api.rootraiz.site/login)
 #### params
 - email
 - password
 
 ### Those endpoints is protected by sunctum
-- /user
+- /user - [GET]
+- [/user](https://api.rootraiz.site/user)
 
 
-- sendMail
+- sendMail - [POST]
+- [/sendMail](https://api.rootraiz.site/sendMail)
 
-- /bycredit
+- /bycredit - [POST]
+- [/bycredit](https://api.rootraiz.site/bycredit)
 
 #### params
 - salt = int
